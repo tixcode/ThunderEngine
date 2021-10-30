@@ -5,4 +5,4 @@ Thunder Engine its pack of modules for many programming languagues: Starts from 
 https://sites.google.com/view/thundercode/главная-страница
 
 ## All Products
-Thunder Game, Thunder Variables, Discord.json, JpJson
+Thunder Game, Thunder Variables, UpJSON
