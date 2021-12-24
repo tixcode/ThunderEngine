@@ -36,7 +36,7 @@ class Enviroment:
                     except: raise Exception("Enviroment Reading Error: Value of %s can't be converted to float!" % left)
                 case "s->":
                     try:
-                        self.data[left] = str(right)
+                        self.data[left] = str(right).replace("\\n", "\n")
                     except: raise Exception("Enviroment Reading Error: Value of %s can't be converted to string!" % left)
                 case "b->":
                     try:
@@ -51,7 +51,7 @@ class Enviroment:
             if type(variable[1]) == int or type(variable[1]) == float:
                 vars.append("%s %s %s" % (variable[0], "i->", variable[1]))
             if type(variable[1]) == str:
-                vars.append("%s %s %s" % (variable[0], "s->", variable[1]))
+                vars.append("%s %s %s" % (variable[0], "s->", str(variable[1]).replace("\n", "\\n")))
             if type(variable[1]) == bool:
                 vars.append("%s %s %s" % (variable[0], "b->", bool2str(variable[1])))
         
